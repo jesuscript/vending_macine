@@ -1,0 +1,45 @@
+<template name="goods">
+    <div class="row">
+        <div class="span2">
+            <h2>Goods</h2>
+        </div>
+        <div class="span10">
+            <table class="goods table table-bordered table-striped">
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Price (pence)
+                    </th>
+                    <th>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="name">
+                    </td>
+                    <td>
+                        <input type="number" class="price">
+                    </td>
+                    <td>
+                        <span class="btn add">Add</span>
+                    </td>
+                </tr>
+                {{#each items}}
+                    <tr data-id="{{_id}}">
+                        <td class="name" data-name="{{name}}">
+                            {{name}}
+                        </td>
+                        <td class="price" data-price="{{price}}">
+                            {{price}}
+                        </td>
+                        <td>
+                            <span class="btn buy btn-danger">Buy</span>
+                        </td>
+                    </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</template>

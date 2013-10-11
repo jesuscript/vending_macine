@@ -1,0 +1,115 @@
+<template name="change">
+    <div class="row">
+        <div class="span2">
+            <h2>Change</h2>
+        </div>
+        <div class="span10">
+            <table class="change table table-bordered">
+                <tr>
+                    <th>
+                        Denomination
+                    </th>
+                    <th>
+                        1p
+                    </th>
+                    <th>
+                        2p
+                    </th>
+                    <th>
+                        5p
+                    </th>
+                    <th>
+                        10p
+                    </th>
+                    <th>
+                        20p
+                    </th>
+                    <th>
+                        50p
+                    </th>
+                    <th>
+                        £1
+                    </th>
+                    <th>
+                        £2
+                    </th>
+                </tr>
+                <tr>
+                    {{#with amounts}}
+                        <td>
+                            Number
+                        </td>
+                        <td>
+                            {{_1.number}}
+                        </td>
+                        <td>
+                            {{_2.number}}
+                        </td>
+                        <td>
+                            {{_5.number}}
+                        </td>
+                        <td>
+                            {{_10.number}}
+                        </td>
+                        <td>
+                            {{_20.number}}
+                        </td>
+                        <td>
+                            {{_50.number}}
+                        </td>
+                        <td>
+                            {{_100.number}}
+                        </td>
+                        <td>
+                            {{_200.number}}
+                        </td>
+                    {{/with}}
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <div class="btn" data-amount="_1">
+                            +
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn" data-amount="_2">
+                            +
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn" data-amount="_5">
+                            +
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn" data-amount="_10">
+                            +
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn" data-amount="_20">
+                            +
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn" data-amount="_50">
+                            +
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn" data-amount="_100">
+                            +
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn" data-amount="_200">
+                            +
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</template>
